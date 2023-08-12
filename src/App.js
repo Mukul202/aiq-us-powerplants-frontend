@@ -39,7 +39,7 @@ function App() {
          res.results.map(pos => ({
            ...pos, location: { lat: pos.latitude, lng: pos.longitude } 
          })))
-         ).catch(err => console.log(err)).finally(setLoading(false));
+         ).catch(err => console.log(err)).finally(() => setLoading(false));
     }
     getPowerPlants();
   },[]);
