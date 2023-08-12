@@ -33,7 +33,7 @@ function App() {
   useEffect(() => {
     // setLoading(true);
     const getPowerPlants=async () => {
-      await fetch('http://localhost:8000/api/powerplants/')
+      await fetch('https://aiq-us-powerplants-api.onrender.com/api/powerplants/')
        .then(res => res.json())
        .then(res => setPowerPlantPositions(
          res.results.map(pos => ({
